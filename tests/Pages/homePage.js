@@ -5,6 +5,7 @@ class HomePage {
 
   async open() {
     await this.page.goto('https://demo.automationtesting.in/Index.html', { waitUntil: 'domcontentloaded' });
+    await this.page.waitForLoadState('load');
   }
 
   async isLoaded() {

@@ -11,13 +11,14 @@ Scenario: Opening the Demopage homepage
 
   @demologin
   Scenario: Opening the Demo login page
-    Given the user opens the Amazon login page
-    Then the Amazon login page should load
+    Given the user opens the Demopage login page
+    Then the Demopage login page should load
 
 @registration
-Scenario: Opening the Amazon registration page
-  Given the user opens the Amazon registration page
-  Then the Amazon registration page should load
+Scenario: Opening the Demopage registration page
+  Given the user opens the Demopage registration page
+  Then The user enter email id
+  And verify the title of the page account creation page
 
   Scenario: Filling the Amazon registration form with sample data
     Given the user opens the Amazon registration page

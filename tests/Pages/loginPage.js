@@ -5,6 +5,7 @@ class LoginPage {
 
   async open() {
     await this.page.goto('https://www.amazon.com.au/ap/signin', { waitUntil: 'domcontentloaded' });
+    await this.page.waitForLoadState('load');
   }
 
   async login(email = 'test.user@example.com', password = 'SamplePass123!') {
