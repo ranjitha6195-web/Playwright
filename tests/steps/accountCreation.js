@@ -42,4 +42,7 @@ Given('verify the title of the page account creation page', async function () {
   await expect(title).toContain('Register');
   console.log('Success: The page title is Register');
 });
-
+Given('verify user can complete registration', async function () {
+  await accountCreationPage.completeRegistration();
+ console.log('User details filled and form submitted successfully.');
+});

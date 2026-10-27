@@ -19,6 +19,7 @@ Scenario: Opening the Demopage registration page
   Given the user opens the Demopage registration page
   Then The user enter email id
   And verify the title of the page account creation page
+  And verify user can complete registration
 
   Scenario: Filling the Amazon registration form with sample data
     Given the user opens the Amazon registration page
