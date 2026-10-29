@@ -31,8 +31,8 @@ Given('the user opens the Demopage registration page', async function () {
 
 Given('The user enter email id', async function () {
   await accountCreationPage.fillSampleData();
-  const emailInput = page.locator('input[ng-model="EmailAdress"]');
-  await expect(emailInput).toHaveValue('test.user@example.com');
+  const emailInput1 = page.locator('input[ng-model="EmailAdress"]');
+  await expect(emailInput1).toHaveValue('test.user@example.com');
   await expect(page.locator('#submitbtn')).toBeVisible();
 });
 

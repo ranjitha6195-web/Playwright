@@ -9,18 +9,20 @@ Scenario: Opening the Demopage homepage
     Then the page title should contain "Demopage"
     And I pause for manual inspection
 
-  @demologin
-  Scenario: Opening the Demo login page
-    Given the user opens the Demopage login page
-    Then the Demopage login page should load
+  @login
+  Scenario: Opening the automationexcercise login page
+    Given the user opens the automationexcercise login page
+    Then the automation login page should load
+    Then verify user can complete login
+    
 
 @registration
 Scenario: Opening the Demopage registration page
   Given the user opens the Demopage registration page
   Then The user enter email id
   And verify the title of the page account creation page
-  And verify user can complete registration
-
+  And verify user can complete registration 
+  
   Scenario: Filling the Amazon registration form with sample data
     Given the user opens the Amazon registration page
     When the user enters sample registration data

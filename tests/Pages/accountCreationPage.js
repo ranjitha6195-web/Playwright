@@ -45,7 +45,7 @@ class AccountCreationPage {
     await this.page.locator('#firstpassword').fill(formData.password);
     await this.page.locator('#secondpassword').fill(formData.password);
     await this.page.locator('#submitbtn').click({ force: true });
-    await this.page.waitForTimeout(500000);
+    await this.page.waitForTimeout(5000);
     
   }
 }

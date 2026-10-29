@@ -4,31 +4,27 @@ class LoginPage {
   }
 
   async open() {
-    await this.page.goto('https://www.amazon.com.au/ap/signin', { waitUntil: 'domcontentloaded' });
+    await this.page.goto('https://www.automationexercise.com/login', { waitUntil: 'domcontentloaded' });
     await this.page.waitForLoadState('load');
   }
 
-  async login(email = 'test.user@example.com', password = 'SamplePass123!') {
-    const emailInput = this.page.locator('input#ap_email');
-    const passwordInput = this.page.locator('input#ap_password');
-    const signInButton = this.page.locator('input#signInSubmit');
+async login(email = 'rose1234@gmail.com', password = 'rose@1234') {
+  const emailInput = this.page.locator('[data-qa="login-email"]');
+  const passwordInput = this.page.locator('[data-qa="login-password"]');
+  const signInButton = this.page.locator('[data-qa="login-button"]');
 
-    if (await emailInput.count()) {
-      await emailInput.fill(email);
-    }
-
-    if (await passwordInput.count()) {
-      await passwordInput.fill(password);
-    }
-
-    if (await signInButton.count()) {
-      await signInButton.click();
-    }
+  if (await emailInput.count()) {
+    await emailInput.fill(email);
   }
 
-  async isLoaded() {
-    return this.page.url().includes('/ap/signin');
+  if (await passwordInput.count()) {
+    await passwordInput.fill(password);
   }
+
+  if (await signInButton.count()) {
+    await signInButton.click();
+  }
+}  
 }
 
 module.exports = LoginPage;

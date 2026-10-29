@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js --require ./tests/steps/google.steps.js --require ./tests/steps/accountCreation.js ./tests/Feature/google.feature"
+    "test": "npx cucumber-js --require ./tests/steps/**/*.js ./tests/Feature/google.feature"
   },
   "keywords": [],
   "author": "",
